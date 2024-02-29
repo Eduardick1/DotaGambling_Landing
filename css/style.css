@@ -220,6 +220,8 @@ header {
   grid-template-columns: 1fr 1fr;
   place-content: center center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
 }
 .cup_image {
   grid-row: span 2;
@@ -232,6 +234,19 @@ header {
   color: #b9b9b9;
   font-weight: 300;
   text-wrap: wrap;
+}
+.cup::before {
+  position: absolute;
+  content: "";
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(0, 100, 100, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+}
+.cup > * {
+  position: relative;
 }
 @media (max-width: 770px) {
   .cup {
@@ -355,6 +370,8 @@ header {
   grid-template-columns: 1fr 1fr;
   place-content: center center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
 }
 .cup_image {
   grid-row: span 2;
@@ -367,6 +384,19 @@ header {
   color: #b9b9b9;
   font-weight: 300;
   text-wrap: wrap;
+}
+.cup::before {
+  position: absolute;
+  content: "";
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(0, 100, 100, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+}
+.cup > * {
+  position: relative;
 }
 @media (max-width: 770px) {
   .cup {
