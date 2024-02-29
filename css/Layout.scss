@@ -1,0 +1,139 @@
+@import "./vars";
+
+header {
+  background-color: $headerBgColor;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; // GAP
+    cursor: pointer;
+    flex-shrink: 0;
+    &_image {
+      overflow: hidden;
+      height: 55px;
+      width: 58px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      &_title {
+        span {
+          @media (min-width: 450px) {
+            display: none;
+          }
+        }
+      }
+      &_subtitle {
+        color: #9a9a9a;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 378px;
+    width: 100%;
+    a:hover {
+      transition: $transition;
+      color: $activeColor;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: uppercase;
+    $borderRadius: 12px;
+    $Padding: 10px 20px;
+    a {
+      flex-shrink: 0;
+      display: inline-block;
+    }
+    &_login {
+      border-radius: $borderRadius;
+      padding: $Padding;
+      transition: $transition;
+      &:hover {
+        background-color: #fff;
+        color: $activeColor;
+      }
+    }
+    &_signup {
+      border-radius: $borderRadius;
+      padding: $Padding;
+      background-color: $activeColor;
+      transition: $transition;
+
+      &:hover {
+        background-color: #fff;
+        color: $activeColor;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    &__logo__text_subtitle {
+      display: none;
+    }
+    &__auth {
+      a {
+        max-width: 88px;
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.footer {
+  font-size: 18px !important;
+  font-weight: 300;
+  color: #cdcccc;
+  margin-top: 227px;
+  padding-bottom: 35px;
+  &__top {
+    color: #b9b9b9;
+  }
+  &__bottom {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_copy {
+      font-size: 500;
+    }
+    &__docs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 350px;
+      a {
+        flex-shrink: 0;
+        text-decoration: underline !important;
+        transition: $transition;
+        &:hover {
+          color: $activeColor;
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 57px;
+    }
+  }
+}

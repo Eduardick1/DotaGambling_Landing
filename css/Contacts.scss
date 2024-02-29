@@ -1,0 +1,48 @@
+@import "./vars";
+
+.contacts {
+  padding-top: 132px;
+  &_title {
+    font-size: 26px !important;
+  }
+  &__info {
+    height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-top: 36px;
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      font-weight: 200;
+      font-size: 22px;
+      a {
+        text-decoration: underline !important;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+          color: $activeColor;
+        }
+      }
+    }
+    @media (max-width: 860px) {
+      flex-direction: column;
+    }
+  }
+  &_image {
+    overflow: hidden;
+    border-radius: 25px;
+    max-width: 544px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 560px) {
+    display: none;
+  }
+}

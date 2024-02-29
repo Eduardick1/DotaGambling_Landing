@@ -1,0 +1,39 @@
+@import "./vars";
+
+.cup {
+  padding-top: 118px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center center;
+  gap: 10px;
+  &_image {
+    grid-row: span 2;
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  &_text {
+    color: #b9b9b9;
+    font-weight: 300;
+    text-wrap: wrap;
+  }
+  @media (max-width: 770px) {
+    padding-top: 80px;
+    &_image {
+      grid-row: span 1;
+      img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &_title {
+      display: flex;
+      align-items: center;
+    }
+    &_text {
+      grid-column: span 2;
+    }
+  }
+}

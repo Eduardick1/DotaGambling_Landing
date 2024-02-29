@@ -1,0 +1,39 @@
+@import "./vars";
+@import "./reset";
+@import "./Layout.scss";
+@import "./Hero.scss";
+@import "./Cup.scss";
+@import "./Teams.scss";
+@import "./Prize.scss";
+
+@import "./Cup.scss";
+@import "./Faq.scss";
+@import "./Reg.scss";
+@import "./Contacts.scss";
+
+body {
+  background-color: $bgColor;
+  color: $textPrimaryColor;
+  font-family: "Lexend", sans-serif;
+}
+
+.container {
+  max-width: 1274px;
+  padding: 0 12px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.text {
+  font-size: clamp(12px, 0.53rem + 0.94vw, 22px);
+}
+
+h1 {
+  font-size: clamp(26px, 0.61rem + 4.32vw, 72px);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(20px, 0.9rem + 1.5vw, 36px);
+  font-weight: 400;
+}

@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  text-wrap: balance;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,57 @@
+@import "./vars";
+
+.faq {
+  padding-top: 145px;
+  margin: 0 auto;
+  max-width: 1076px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  h2 {
+    display: none;
+  }
+  &__block {
+    color: $textColorBlue;
+    font-size: 22px;
+    border-radius: 15px;
+    background-color: #21262d;
+    &_title {
+      position: relative;
+      cursor: pointer;
+      display: block;
+      height: fit-content;
+      padding: 20px 45px;
+      &::after {
+        content: " ";
+        background: url("../assets/cross.svg");
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform-origin: right;
+        transform: translateY(-50%);
+        transition: $transition;
+      }
+    }
+
+    &__body {
+      display: none;
+      padding: 0 45px 20px;
+      font-weight: 300;
+    }
+    input {
+      display: none;
+      &:checked ~ div {
+        display: block;
+      }
+      &:checked ~ label:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 95px;
+  }
+}
